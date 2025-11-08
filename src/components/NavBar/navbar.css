@@ -2,7 +2,7 @@
     background: rgb(30, 30, 30);
     height: 5rem;
     width: 100vw;
-    max-width: 75rem;
+    max-width: 80%;
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
@@ -18,9 +18,17 @@
     height: 5rem;
     width: 6rem;
 }
+.deskTopMenu {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* 👈 spacing between links */
+}
 .desktopMenuItem{
     margin: 1rem;
     cursor: pointer;
+    font-size: 22px; /* 👈 text size */
+    font-weight: 500;
+
 }
 .desktopMenuItem:hover{
     color: yellow;
@@ -36,6 +44,8 @@
     justify-content: center;
     padding: 0 1rem;
     border-radius: 2rem;
+    font-size: 22px; /* 👈 text size */
+    font-weight: 500;
 }
 .deskTopMenuImg{
     object-fit: cover;

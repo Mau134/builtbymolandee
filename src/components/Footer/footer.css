@@ -1,10 +1,71 @@
-.footer{
-    width: 100vw;
-    height: 4rem;
-    background: rgb(40, 40, 40);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-    font-size: 0.9rem;
+/* ------------------------------
+   Footer
+------------------------------ */
+.footer {
+  width: 100%;
+  background: rgb(40, 40, 40);
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 300;
+  flex-wrap: wrap;
 }
+
+.footer p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+    .footer p {
+        line-height: 1.4;
+    }
+         
+/* ------------------------------
+   Responsive Design                    
+------------------------------ */
+/* Mobile Phones */                             
+@media screen and (max-width: 480px) {
+  .footer { 
+    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+    .footer p {
+        line-height: 1.4;
+    }
+}
+/* ------------------------------               
+
+    Responsive Design   
+
+------------------------------ */
+/* Mobile Phones */                             
+@media screen and (max-width: 480px) {  
+  .footer { 
+    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+    .footer p {
+        line-height: 1.4;
+    }
+}
+

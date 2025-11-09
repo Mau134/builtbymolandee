@@ -1,5 +1,6 @@
+// src/components/Works/works.js
 import React from 'react';
-import "./works.css";
+import './works.css';
 import Portfolio1 from '../../assets/portfolio-1.png';
 import Portfolio2 from '../../assets/portfolio-2.png';
 import Portfolio3 from '../../assets/portfolio-3.png';
@@ -7,24 +8,27 @@ import Portfolio4 from '../../assets/portfolio-4.png';
 import Portfolio5 from '../../assets/portfolio-5.png';
 import Portfolio6 from '../../assets/portfolio-6.png';
 
-const works = () => {
+const Works = () => {
   return (
-    <section id='works'>
-        <h2 className='worksTitle'>My Portfolio</h2>
-        <span className='worksDesc'>LoremElit esse adipisicing ipsum nisi in ut incididunt ipsum. 
-            Ut ex enim veniam id sit eiusmod nulla culpa et ad ea non. Est nulla nulla incididunt exercitation. Dolor commodo
-             mollit nulla adipisicing ea minim non.</span>
-        <div className='worksImgs'>
-            <img src={Portfolio1} alt='' className='worksImg' />
-            <img src={Portfolio2} alt='' className='worksImg' />
-            <img src={Portfolio3} alt='' className='worksImg' />
-            <img src={Portfolio4} alt='' className='worksImg' />
-            <img src={Portfolio5} alt='' className='worksImg' />
-            <img src={Portfolio6} alt='' className='worksImg' />
-        </div>
-        <button className='worksBtn'>See More</button>
+    <section id="works">
+      <h2 className="worksTitle">My Portfolio</h2>
+      <span className="worksDesc">
+        Explore a selection of my design and development work. Each project highlights my focus on
+        clean design, responsive layouts, and creating seamless user experiences.
+      </span>
+
+      <div className="worksImgs">
+        <img src={Portfolio1} alt="Project 1" className="worksImg" />
+        <img src={Portfolio2} alt="Project 2" className="worksImg" />
+        <img src={Portfolio3} alt="Project 3" className="worksImg" />
+        <img src={Portfolio4} alt="Project 4" className="worksImg" />
+        <img src={Portfolio5} alt="Project 5" className="worksImg" />
+        <img src={Portfolio6} alt="Project 6" className="worksImg" />
+      </div>
+
+      <button className="worksBtn">See More</button>
     </section>
   );
-}
+};
 
-export default works
+export default Works;

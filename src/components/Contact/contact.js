@@ -18,13 +18,13 @@ const Contact = () => {
             <p className='clientDesc'>
                 Here are some of my clients that I have worked for. 
             </p>
-            <div className='clientImgs'>
-                <img src={Walmart} alt='Clients' className='clientImg'/>
-                <img src={Microsoft} alt='Clients' className='clientImg'/>
-                <img src={Adobe} alt='Clients' className='clientImg'/>
-                <img src={Facebook} alt='Clients' className='clientImg'/>
+              <div className='clientImgs'>
+                <div className='clientBox'><img src={Walmart} alt='Walmart' className='clientImg'/></div>
+                <div className='clientBox'><img src={Microsoft} alt='Microsoft' className='clientImg'/></div>
+                <div className='clientBox'><img src={Adobe} alt='Adobe' className='clientImg'/></div>
+                <div className='clientBox'><img src={Facebook} alt='Facebook' className='clientImg'/></div>
+              </div>
 
-            </div>
         </div>
 
         <div id='contact'>

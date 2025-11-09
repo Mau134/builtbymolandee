@@ -1,61 +1,214 @@
-.navbar{
-    background: rgb(30, 30, 30);
-    height: 5rem;
-    width: 100vw;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position:sticky;
-    top: 0;
-    z-index: 3;
+.navbar {
+  background: rgb(30, 30, 30);
+  height: 5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
-.logo{
-    object-fit: cover;
-    height: 5rem;
-    width: 6rem;
+.logo {
+  object-fit: cover;
+  height: 4rem;
+  width: 5rem;
 }
+
 .deskTopMenu {
   display: flex;
   align-items: center;
-  gap: 40px; /* 👈 spacing between links */
+  gap: 40px; /* spacing between links */
 }
-.desktopMenuItem{
-    margin: 1rem;
-    cursor: pointer;
-    font-size: 22px; /* 👈 text size */
-    font-weight: 500;
 
+.desktopMenuItem {
+  margin: 1rem;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
-.desktopMenuItem:hover{
-    color: yellow;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid yellow;
+
+.desktopMenuItem:hover {
+  color: yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid yellow;
 }
-.deskTopMenuBtn{
-    background: white;
-    color: black;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.deskTopMenuBtn {
+  background: white;
+  color: black;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.deskTopMenuBtn:hover {
+  background: yellow;
+  color: black;
+}
+
+.deskTopMenuImg {
+  object-fit: cover;
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.active {
+  color: yellow;
+  border-bottom: 3px solid yellow;
+}
+
+/* ========================= */
+/* 🧠 Responsive Design */
+/* ========================= */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .desktopMenuItem {
+    font-size: 18px;
+    margin: 0.5rem;
+  }
+
+  .deskTopMenu {
+    gap: 25px;
+  }
+
+  .deskTopMenuBtn {
+    font-size: 16px;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .deskTopMenu {
+    display: none; /* hide desktop menu */
+  }
+
+  .deskTopMenuBtn {
+    display: none; /* hide contact button */
+  }
+
+  .navbar {
+    justify-content: space-between;
     padding: 0 1rem;
-    border-radius: 2rem;
-    font-size: 22px; /* 👈 text size */
-    font-weight: 500;
-}
-.deskTopMenuImg{
-    object-fit: cover;
-    height: 1rem;
-    width: 1rem;
-    margin: 1rem;
+  }
 
-}
+  /* Mobile menu toggle (hamburger icon) */
+  .mobileMenuIcon {
+    display: block;
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+  }
 
-.active{
+  /* When menu is open */
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(30, 30, 30);
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  .mobileMenuItem {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .mobileMenuItem:hover {
     color: yellow;
-    border-bottom: 3px solid yellow;
+  }
+}
+/* --- Responsive design --- */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .desktopMenuItem {
+    font-size: 18px;
+    margin: 0.5rem;
+  }
+
+  .deskTopMenu {
+    gap: 25px;
+  }
+
+  .deskTopMenuBtn {
+    font-size: 16px;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .deskTopMenu,
+  .deskTopMenuBtn {
+    display: none; /* hide desktop items */
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+
+  /* Hamburger icon */
+  .mobileMenuIcon {
+    display: block;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Mobile dropdown */
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(30, 30, 30);
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    gap: 1rem;
+    z-index: 10;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .mobileMenuItem {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .mobileMenuItem:hover {
+    color: yellow;
+  }
+}
+
+/* Hide mobile icon on large screens */
+@media (min-width: 769px) {
+  .mobileMenuIcon {
+    display: none;
+  }
 }

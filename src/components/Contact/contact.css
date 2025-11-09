@@ -1,5 +1,5 @@
 /* ------------------------------
-   Base Layout
+   Contact Page Layout
 ------------------------------ */
 #contactPage {
   width: 100%;
@@ -12,39 +12,36 @@
   box-sizing: border-box;
   text-align: center;
   color: #fff;
+  background: #111;
 }
 
 /* ------------------------------
    Clients Section
 ------------------------------ */
 #clients {
-  margin-bottom: 4rem;
   width: 100%;
-  text-align: center;
+  margin-bottom: 4rem;
 }
 
 .contactPageTitle {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
 .clientDesc {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   max-width: 40rem;
-  margin: 0 auto 2rem auto;
-  line-height: 1.6;
+  margin: 0 auto 2rem;
   color: #ccc;
 }
 
-/* Client images as equal boxes */
+/* Client boxes */
 .clientImgs {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1.5rem;
-  justify-items: center;
-  align-items: center;
   width: 100%;
   max-width: 60rem;
   margin: 0 auto;
@@ -54,7 +51,6 @@
   background: rgba(255, 255, 255, 0.05);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  width: 100%;
   height: 8rem;
   display: flex;
   justify-content: center;
@@ -72,43 +68,16 @@
   max-height: 4rem;
   max-width: 100%;
   object-fit: contain;
-  filter: brightness(0.9);
-  transition: filter 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .clientBox:hover .clientImg {
-  filter: brightness(1.1);
   transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
-/* Responsive Adjustments */
-@media screen and (max-width: 768px) {
-  .clientBox {
-    height: 7rem;
-    padding: 1rem;
-  }
-
-  .clientImg {
-    max-height: 3rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .clientImgs {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .clientBox {
-    height: 6rem;
-  }
-
-  .clientImg {
-    max-height: 2.5rem;
-  }
-}
 /* ------------------------------
-   Contact Form Section
+   Contact Form
 ------------------------------ */
 #contact {
   width: 100%;
@@ -116,22 +85,20 @@
   background: rgba(255, 255, 255, 0.05);
   padding: 3rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .contactDesc {
-  font-size: 1.1rem;
-  font-weight: 300;
+  font-size: 1.05rem;
   color: #ccc;
-  display: block;
   margin-bottom: 2rem;
+  display: block;
 }
 
 .contactForm {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  width: 100%;
+  gap: 1rem;
 }
 
 .name,
@@ -144,8 +111,6 @@
   font-size: 1rem;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  outline: none;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .name::placeholder,
@@ -157,20 +122,21 @@
 .name:focus,
 .email:focus,
 .msg:focus {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.01);
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
 }
 
+/* Button */
 .submitBtn {
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 2rem;
   background: #ffd700;
   color: #000;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: background 0.3s, transform 0.2s;
 }
 
 .submitBtn:hover {
@@ -178,95 +144,73 @@
   transform: translateY(-2px);
 }
 
-/* ------------------------------
-   Social Links
------------------------------- */
+/* Social Links */
 .links {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .link {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.3rem;
+  height: 2.3rem;
   cursor: pointer;
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
+  transition: transform 0.3s, opacity 0.3s;
 }
 
 .link:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
   opacity: 1;
 }
 
 /* ------------------------------
-   Responsive Breakpoints
+   Footer (Responsive)
 ------------------------------ */
-
-/* Tablets */
-@media screen and (max-width: 1024px) {
-  .contactPageTitle {
-    font-size: 2.5rem;
-  }
-
-  .clientDesc,
-  .contactDesc {
-    font-size: 1rem;
-  }
-
-  .clientImg {
-    height: 3.5rem;
-  }
+.footer {
+  width: 100%;
+  background: rgb(40, 40, 40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #ccc;
+  padding: 1rem;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
-/* Mobile */
-@media screen and (max-width: 768px) {
-  #contactPage {
-    padding: 3rem 1rem;
-  }
-
+/* ------------------------------
+   Responsive
+------------------------------ */
+@media (max-width: 768px) {
   .contactPageTitle {
     font-size: 2.2rem;
   }
 
-  .clientImgs {
-    gap: 1.5rem;
+  .clientBox {
+    height: 6.5rem;
+    padding: 1rem;
   }
 
   #contact {
-    padding: 2.5rem 1.5rem;
-  }
-
-  .name,
-  .email,
-  .msg {
-    font-size: 0.95rem;
-  }
-
-  .submitBtn {
-    font-size: 1rem;
+    padding: 2rem 1.5rem;
   }
 }
 
-/* Small Phones */
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
   .contactPageTitle {
     font-size: 1.8rem;
   }
 
-  .clientDesc,
-  .contactDesc {
-    font-size: 0.95rem;
-  }
-
   .clientImgs {
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .clientImg {
-    height: 3rem;
+  .clientBox {
+    height: 5.5rem;
   }
 
   .link {
